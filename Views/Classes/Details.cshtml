@@ -1,0 +1,42 @@
+﻿@model cb716316_christian_MIS4200.Models.Classes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Classes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.className)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.className)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classRoom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.classID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
