@@ -13,7 +13,7 @@ namespace cb716316_christian_MIS4200.DAL
         {
 
         }
-        public  DbSet<Student> Student { get; set; }
+        public  DbSet<Student> Students { get; set; }
         public DbSet<Classes> Classes { get; set; }
 
         public System.Data.Entity.DbSet<cb716316_christian_MIS4200.Models.Professor> Professors { get; set; }
