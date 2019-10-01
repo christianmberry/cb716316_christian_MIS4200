@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using cb716316_christian_MIS4200.Models;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace cb716316_christian_MIS4200.DAL
 {
@@ -14,10 +15,13 @@ namespace cb716316_christian_MIS4200.DAL
 
         }
         public  DbSet<Student> Students { get; set; }
-        public DbSet<Classes> Classes { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<ClassDetails> ClassDetails { get; set; }
 
-        public System.Data.Entity.DbSet<cb716316_christian_MIS4200.Models.Professor> Professors { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
 
-        public System.Data.Entity.DbSet<cb716316_christian_MIS4200.Models.Schedule> Schedules { get; set; }
     }
 }
