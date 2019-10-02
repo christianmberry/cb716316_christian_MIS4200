@@ -10,26 +10,33 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Students - Classes</h2>
+        <h2>Students</h2>
         <p>
-            My SD2 relationship is between students and classes. A student can have many classes, and a class can have many students.
+            A student can have many classes, and a class can have many students.
         </p>
         <p>
             Links to Controllers:<br />
             @Html.ActionLink("Students", "Index", "Students")<br />
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Class Details</h2>
+        <p>
+            Class Details shows the class room, class name, and professor.
+        </p>
+        <p>
+            Links to Controllers:<br />
             @Html.ActionLink("ClassDetails", "Index", "ClassDetails")<br />
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Schedules</h2>
+        <p>
+            Schedules depict the schedule that a student owns, with classes and semesters.
+        </p>  
+        <p>
+            Links to Controllers:<br />
             @Html.ActionLink("Schedules", "Index", "Schedules")<br />
         </p>
-        <p><a class="btn btn-default" href="ohio.edu">Ohio University &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
