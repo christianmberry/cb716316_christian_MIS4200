@@ -12,6 +12,7 @@ namespace cb716316_christian_MIS4200.Migrations.MIS4200Context
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\MIS4200Context";
             ContextKey = "cb716316_christian_MIS4200.DAL.MIS4200Context";
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(cb716316_christian_MIS4200.DAL.MIS4200Context context)
