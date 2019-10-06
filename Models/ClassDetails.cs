@@ -24,11 +24,9 @@ namespace cb716316_christian_MIS4200.Models
         public string profLastName { get; set; }
 
         public int scheduleID { get; set; }
-        [Display(Name = "Schedule")]
         public virtual Schedule Schedule { get; set; }
 
         public int studentID { get; set; }
-        [Display(Name = "Student")]
         public virtual Student Student { get; set; }
     }
 }
