@@ -6,6 +6,9 @@
 
 <h2>Students</h2>
 
+<div class="container">
+    <div class="well">These students are current university students, and the table includes their year in school.</div>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -26,26 +29,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.year)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.studentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.studentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.studentID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.studentID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.studentID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.studentID })
+            </td>
+        </tr>
+    }
 
 </table>
+<span class="glyphicon glyphicon-home"></span> -
+<a class="btn btn-primary" @Html.ActionLink("Home", "Index", "Home")</a>
